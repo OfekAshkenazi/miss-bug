@@ -1,14 +1,14 @@
-import { bugService } from "../services/bug.service.js"
-
 const { useState, useEffect } = React
 const { useNavigate, useParams } = ReactRouterDOM
+
+import { bugService } from "../services/bug.service.js"
+import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 
 
 export function BugEdit() {
     const [bugToEdit, setBugToEdit] = useState(bugService.getEmptyBug())
     const navigate = useNavigate()
     const { bugId } = useParams()
-    console.log(bugId)
 
     useEffect(() => {
         if (!bugId) return
@@ -27,13 +27,13 @@ export function BugEdit() {
         ev.preventDefault()
         bugService.save(bugToEdit)
             .then(savedBug => {
-                console.log('Added Bug', savedBug)
                 navigate('/bug')
                 showSuccessMsg('Bug added')
             })
             .catch(err => {
                 console.log('Error from onAddBug ->', err)
                 showErrorMsg('Cannot add bug')
+                navigate('/bug')
             })
     }
 
@@ -43,7 +43,6 @@ export function BugEdit() {
         setBugToEdit((prevBug) => ({ ...prevBug, [field]: value }))
     }
 
-    console.log(bugToEdit)
     if (!bugToEdit) return <h2>loading...</h2>
 
     return <section>

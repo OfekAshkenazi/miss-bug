@@ -20,7 +20,7 @@ export function BugDetails() {
                 showErrorMsg('laaa')
             })
     }, [])
-    console.log(bug)
+
     if (bug === null || !bug) return <h1>pls wait 15 sec</h1>
     return bug && <div>
         <h3>Bug Details {arrayOfBugs[utilService.getRandomIntInclusive(0, 10)]}</h3>

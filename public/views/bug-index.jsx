@@ -7,6 +7,7 @@ import { BugFilter } from '../cmps/bug-filter.jsx'
 import { bugService } from '../services/bug.service.js'
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { BugSort } from '../cmps/bug-sort.jsx'
+import { UserSign } from '../cmps/user-sign.jsx'
 
 export function BugIndex() {
     const [filterBy, setFilterBy] = useState(bugService.getDefaultFilter())
@@ -49,7 +50,7 @@ export function BugIndex() {
                 showSuccessMsg('Bug removed')
             })
             .catch(err => {
-                console.log('Error from onRemoveBug ->', err)
+                // console.log('Error from onRemoveBug ->', err)
                 showErrorMsg('Cannot remove bug')
             })
     }
@@ -60,6 +61,7 @@ export function BugIndex() {
 
     return (
         <main className="bug-index">
+            <UserSign />
             <BugFilter onSetFilterBy={onSetFilterBy} />
             <BugSort onSetSortBy={onSetSortBy} />
             <button onClick={onGoToAdd}>Add Bug ⛐</button>

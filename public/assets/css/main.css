@@ -42,6 +42,7 @@ nav a:hover {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 button {
@@ -50,6 +51,15 @@ button {
     border-radius: 5px;
     padding: 0.3em 0.7em;
     cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.align-itmes {
+    align-items: center;
 }
 
 .btn-box-preview {
@@ -122,7 +132,7 @@ button {
     min-width: 175px;
 }
 
-.bug-preview button  {
+.bug-preview button {
     color: lightskyblue;
 }
 
