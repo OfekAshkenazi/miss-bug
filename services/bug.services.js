@@ -1,5 +1,5 @@
 const fs = require('fs');
-var bugs = require('../data/bugs.json')
+var bugs = require('../data/bug.json')
 const PAGE_SIZE = 5
 
 module.exports = {
@@ -8,7 +8,6 @@ module.exports = {
     remove,
     save
 }
-
 
 function query(queryParams) {
     const { title, severity, description, createdAt, pageIdx, createdAT, Description, label } = queryParams

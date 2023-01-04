@@ -13,6 +13,7 @@ export const bugService = {
 function getDefaultFilter() {
     return { title: '', description: '', severity: '', createdAt: '', pageIdx: 0, label: '' }
 }
+
 function getDefaultSort() {
     return { createdAT: false, Description: false }
 }
