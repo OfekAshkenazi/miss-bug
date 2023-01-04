@@ -21,9 +21,9 @@ export function UserSign() {
         navigate('/admin/page')
     }
 
-    return <section>
+    return <section className="user-sign-area">
         {user ? (
-            < section className="flex">
+            < section className="user-header flex">
                 <h2>Hello {user.fullname}</h2>
                 <button onClick={onLogout}>Logout</button>
                 {user.isAdmin && <section>
@@ -34,7 +34,7 @@ export function UserSign() {
 
 
         ) : (
-            <section>
+            <section className="login-form">
                 <LoginSignup onChangeLoginStatus={onChangeLoginStatus} />
             </section>
         )}

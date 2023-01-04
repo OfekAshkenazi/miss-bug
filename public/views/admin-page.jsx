@@ -28,15 +28,18 @@ export function AdminPage() {
     function onRemoveUser(userId) {
         userService.remove(userId)
             .then(() => {
-               const usersToUpdate = users.filter(user => user._id !== userId)
-               setUsers(usersToUpdate)
-               showSuccessMsg('user is delete')
+                const usersToUpdate = users.filter(user => user._id !== userId)
+                setUsers(usersToUpdate)
+                showSuccessMsg('user is delete')
+            })
+            .catch((err) => {
+                showErrorMsg('you bugs')
             })
     }
 
 
-    return <section>
-        <h2>hello dear admin</h2>
+    return <section className="admin-page">
+        <h2>Hello dear admin</h2>
         {/* <userFilter onSetFilterBy={onSetFilterBy}/> */}
 
         <section>

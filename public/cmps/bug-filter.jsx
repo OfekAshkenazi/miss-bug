@@ -24,11 +24,12 @@ export function BugFilter({ onSetFilterBy }) {
     }
 
     return <section className="bug-filter">
-        <h2 style={{ textAlign: 'center' }}>Filter our bugs</h2>
-        <button onClick={() => onSetPage(-1)}>previous</button>
-        <button onClick={() => onSetPage(1)}>next</button>
-        <div className="flex">
-
+        <h2 style={{ textAlign: 'center', backgroundColor: '#ED7D3A' }}>Filter our bugs</h2>
+        <div className="pageing">
+            <button onClick={() => onSetPage(-1)}>previous</button>
+            <button onClick={() => onSetPage(1)}>next</button>
+        </div>
+        <div className="filter-form flex">
             <label>Title:
                 <input type="text"
                     name="title"

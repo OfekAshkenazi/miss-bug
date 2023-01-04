@@ -151,6 +151,7 @@ app.delete('/api/auth/:userId', (req, res) => {
         .then(() => {
             res.send({ msg: 'user removed successfully', userId })
         })
+        .catch(err => console.log(err))
 })
 
 

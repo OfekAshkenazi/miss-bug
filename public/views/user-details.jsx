@@ -47,7 +47,7 @@ export function UserDetails() {
     
     if (user === null) return <section> <h2>if you have acc pls sign in at the bugs page or sign up <a onClick={onGoToBugIndex}>here</a></h2> </section>
 
-    return <section>
+    return <section className="bug-index">
         <h2>Hello dear: {user.fullname}</h2>
         <BugList bugs={bugs} onRemoveBug={onRemoveBug} />
 

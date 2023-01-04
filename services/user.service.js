@@ -32,10 +32,9 @@ function get(userId) {
 function remove(userId) {
     const idx = users.findIndex(user => user._id === userId)
     if (idx === -1) return Promise.reject('No such user')
+    if (users[idx].havebug === 'true') return Promise.reject('he have bug you cant remove it')
     users.splice(idx, 1)
-    return _writeUsersToFile().then(() => {
-        console.log('remove')
-    })
+    return _writeUsersToFile()
 }
 
 function signUp({ fullname, username, password }) {

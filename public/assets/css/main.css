@@ -11,18 +11,31 @@ ul {
     padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
 header {
-    background-color: rgba(135, 206, 250, 0.499);
+    background-color: #363537;
     text-align: center;
-    padding: 5px;
+    padding: 1em;
+
 }
 
 footer {
     width: 100%;
-    background-color: rgba(135, 206, 250, 0.499);
+    background-color: #363537;
     align-items: center;
     padding: 5px;
     text-align: center;
+    color: aliceblue;
+    padding: 1em;
 }
 
 nav a {
@@ -31,7 +44,9 @@ nav a {
     padding: 10px;
     border-bottom: 1px solid transparent;
     text-decoration: none;
-    color: #333;
+    color: aliceblue;
+    background-color: #ED7D3A;
+
 }
 
 nav a:hover {
@@ -46,7 +61,8 @@ a {
 }
 
 button {
-    background-color: rgba(199, 170, 83, 0.571);
+    background-color: #8CD867;
+    color: #EF2D56;
     border: none;
     border-radius: 5px;
     padding: 0.3em 0.7em;
@@ -58,6 +74,7 @@ button {
     flex-direction: row;
     gap: 5px;
 }
+
 .align-itmes {
     align-items: center;
 }
@@ -69,7 +86,8 @@ button {
 }
 
 .bug-index {
-    min-height: 80vh;
+    margin-top: 7.5px;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -133,11 +151,11 @@ button {
 }
 
 .bug-preview button {
-    color: lightskyblue;
+    color: #EF2D56;
 }
 
 .bug-preview button a {
-    color: lightskyblue;
+    color: #EF2D56;
 }
 
 .bug-preview span {
@@ -154,4 +172,96 @@ button {
 
 .edit-form input {
     width: 200px;
+}
+
+.home-page {
+    min-height: 100vh;
+    background-image: url(../img/some.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    color: rgb(2, 24, 8);
+}
+
+.home-page h1,
+h2 {
+    background-color: #363537;
+
+    z-index: 10;
+}
+
+.user-sign-area {
+    background-color: #419366;
+    padding: 0.7em;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.btns {
+    padding: 0.5em;
+}
+
+.user-header h2 {
+    background-color: #419366;
+}
+
+.bug-filter {
+    width: 95vw;
+    background-color: #ED7D3A;
+
+}
+
+.pageing {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding: 0.2em;
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    flex-wrap: wrap;
+    padding: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-page {
+    min-height: 90vh;
+}
+
+.admin-page h2 {
+    text-align: center;
+}
+
+.user-preview {
+    padding: 0.3em;
+}
+
+.user-preview a {
+    color: #ED7D3A;
+}
+
+.users-list {
+    margin: auto;
+    width: 200px;
+    background-color: #333;
+    display: flex;
+    padding: 0.3em;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 10px;
+    border: 1px solid aliceblue;
 }

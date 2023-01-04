@@ -13,7 +13,6 @@ export function AppHeader() {
                 <NavLink to="/about">About</NavLink> |
                 <NavLink to="/profile">Profile</NavLink> 
             </nav>
-            <h1>Bugs are Forever</h1>
         </header>
     )
 }
